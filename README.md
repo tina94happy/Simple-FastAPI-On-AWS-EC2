@@ -10,13 +10,13 @@ EC2 and loading data from AWS S3
 
 # Website Demo
 
-![Movies](https://github.com/tina94happy/Simple-FastAPI-Demo/blob/main/pictures/movies.png)
+![Movies](https://github.com/tina94happy/Simple-FastAPI-On-AWS-EC2/blob/main/pictures/movies.png)
 
-![Users](https://github.com/tina94happy/Simple-FastAPI-Demo/blob/main/pictures/users.png)
+![Users](https://github.com/tina94happy/Simple-FastAPI-On-AWS-EC2/blob/main/pictures/users.png)
 
-![Root](https://github.com/tina94happy/Simple-FastAPI-Demo/blob/main/pictures/root.png)
+![Root](https://github.com/tina94happy/Simple-FastAPI-On-AWS-EC2/blob/main/pictures/root.png)
 
-![IP Info](https://github.com/tina94happy/Simple-FastAPI-Demo/blob/main/pictures/my_public_IP.png)
+![IP Info](https://github.com/tina94happy/Simple-FastAPI-On-AWS-EC2/blob/main/pictures/my_public_IP.png)
 
 
 
