@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .user {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+        }
+        .users-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .user:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+        }
+        /* Button Styling */
+        .btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <body>
+        <a href="/movies" class="btn">Go To Movies</a>
+        <h1 style="text-align:center;">Users Info</h1>
+        <div class="users-container">
+            {% for user in users %}
+            <div class="user">
+                <div class="name">{{ user.name }}</div>
+                <div class="phone">{{ user.phone }}</div>
+                <div class="fave_color">{{ user.fave_color }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </body>
+</html>

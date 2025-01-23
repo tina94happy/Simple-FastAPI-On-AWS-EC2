@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .movie img {
+            width: 100%;
+        }
+        .movie .title {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .movie .release-date {
+            color: gray;
+            font-size: 0.9em;
+        }
+        /* Hover Effect */
+        .movie:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+        }
+        /* Button Styling */
+        .go-to-users-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .go-to-users-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="/users" class="go-to-users-btn">Go to Users</a>
+    
+    <h1 style="text-align:center;">Popular Movies</h1>
+    <div class="movies-container">
+        {% for movie in movies %}
+        <div class="movie">
+            <img src="{{ movie.poster_url }}" alt="{{ movie.title }} Poster">
+            <div class="title">{{ movie.title }}</div>
+            <div class="release-date">Release Date: {{ movie.release_date }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
